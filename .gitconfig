@@ -1,0 +1,48 @@
+[user]
+	name = csauve
+	email = connorsauve@gmail.com
+[push]
+	default = simple
+[web]
+	browser = chrome
+[core]
+	autocrlf = true
+[http]
+	postBuffer = 524288000
+
+[color]
+	ui = auto
+	interactive = auto
+
+[alias]
+	# workflow
+	back = checkout -
+	pushu = !git push -u
+	bring = merge -
+
+	# basic
+	bro = branch -a
+	co = checkout
+	s = status
+	a = add
+	at = !git add . && git status
+	au = !git add -u && git status
+	cam = commit -a -m
+	reco = commit --amend
+	derp = reset --soft HEAD~1
+	ignore = update-index --assume-unchanged
+	notice = update-index --no-assume-unchanged
+
+	# diffs
+	prev = diff HEAD^ HEAD
+	dword = diff --color-words
+	mermaid = diff --name-only --diff-filter=U
+
+	# logs
+	lg = log --graph --pretty=format:'%Cred%h%Creset %C(yellow)%an%d%Creset %s %Cgreen(%cr)%Creset' --date=relative
+	lgl = log --graph --pretty=format:'%Cred%h%Creset %C(yellow)%an%d%Creset %s %Cgreen(%cr)%Creset' --date=relative --numstat
+	sup = log --pretty=format:'%Cred%h%Creset %s %Cgreen(%cr)%Creset' --decorate --since yesterday --author csauve
+	retro = log --pretty=format:'%Cred%h%Creset %s %Cgreen(%cr)%Creset' --decorate --since 2.weeks --author csauve
+	retra = !git for-each-ref --shell --format 'echo %(refname) && git --no-pager retro %(refname)' refs/heads | sh
+	ahead = log --pretty=format:'%Cred%h%Creset %C(yellow)%an%d%Creset %s %Cgreen(%cr)%Creset' --date=relative @{u}..HEAD
+	whodunit = whatchanged -p

@@ -30,7 +30,7 @@
 	cam = commit -a -m
 	reco = commit --amend
 	derp = reset --soft HEAD~1
-	nuke = git reset --hard HEAD~1
+	nuke = reset --hard HEAD~1
 	ignore = update-index --assume-unchanged
 	notice = update-index --no-assume-unchanged
 

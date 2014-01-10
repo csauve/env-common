@@ -2,6 +2,10 @@ alias l='ls'
 alias ll='ls -lh'
 alias lla='ls -lah'
 
+alias wow='git status'
+alias such='git'
+alias very='git'
+
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWUPSTREAM='verbose git'
 

@@ -4,9 +4,10 @@
 [push]
 	default = simple
 [web]
-	browser = chrome
+	browser = firefox
 [core]
-	autocrlf = true
+	autocrlf = false
+
 [http]
 	postBuffer = 524288000
 
@@ -19,20 +20,20 @@
 	back = checkout -
 	pushu = !git push -u
 	bring = merge -
-
-	# basic
-	bro = branch -a
-	co = checkout
 	s = status
-	a = add
-	at = !git add . && git status
-	au = !git add -u && git status
 	cam = commit -a -m
-	reco = commit --amend
-	derp = reset --soft HEAD~1
-	nuke = reset --hard HEAD~1
+	co = checkout
+	com = checkout master
+	cob = checkout -b
+	rbm = !git fetch && git rebase -i origin/master
+	squash = rebase -i HEAD~2
+	comb = !git checkout master && git merge -
 	ignore = update-index --assume-unchanged
 	notice = update-index --no-assume-unchanged
+	a = add
+	redo = commit --amend
+	undo = reset --soft HEAD~1
+	nuke = reset --hard HEAD~1
 
 	# diffs
 	prev = diff HEAD^ HEAD
@@ -43,7 +44,7 @@
 	lg = log --graph --pretty=format:'%Cred%h%Creset %C(yellow)%an%d%Creset %s %Cgreen(%cr)%Creset' --date=relative
 	lgl = log --graph --pretty=format:'%Cred%h%Creset %C(yellow)%an%d%Creset %s %Cgreen(%cr)%Creset' --date=relative --numstat
 	sup = log --pretty=format:'%Cred%h%Creset %s %Cgreen(%cr)%Creset' --decorate --since yesterday --author csauve
-	retro = log --pretty=format:'%Cred%h%Creset %s %Cgreen(%cr)%Creset' --decorate --since 2.weeks --author csauve
+	retro = log --pretty=format:'%Cred%h%Creset %s %Cgreen(%cr)%Creset' --decorate --since 3.weeks --author csauve
 	retra = !git for-each-ref --shell --format 'echo %(refname) && git --no-pager retro %(refname)' refs/heads | sh
 	ahead = log --pretty=format:'%Cred%h%Creset %C(yellow)%an%d%Creset %s %Cgreen(%cr)%Creset' --date=relative @{u}..HEAD
 	whodunit = whatchanged -p

@@ -1,0 +1,22 @@
+'editor':
+  'preferredLineLength': 120
+  'fontSize': 12
+  'showIndentGuide': false
+  'softTabs': false
+  'showInvisibles': true
+  'softWrapAtPreferredLineLength': true
+  'softWrap': true
+'core':
+  'useReactEditor': true
+  'disabledPackages': [
+    'deprecation-cop'
+    'regex-railroad-diagram'
+  ]
+'exception-reporting':
+  'userId': '9bb4ea3b-88c7-cbe4-669f-0c1f9aecc2d2'
+'welcome':
+  'showOnStartup': false
+'metrics':
+  'userId': '07f995b6fd6528058061b71e6b92cd2bd25c4265'
+'whitespace':
+  'ensureSingleTrailingNewline': false

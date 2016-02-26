@@ -1,13 +1,16 @@
-# Atom config notes
-
 ## Favourite packages
 * atom-soda-dark-ui
 * autocomplete-glsl
+* base64
+* color-picker
 * dracula-theme
+* emmet-atom
 * file-icons
 * highlight-selected
 * isotope-ui
+* language-cjsx
 * language-docker
+* language-freemarker
 * language-glsl
 * language-groovy
 * language-jade
@@ -19,12 +22,18 @@
 * linter-jshint
 * linter-rust
 * linter-scss-lint
+* markdown-pdf
 * minimap
+* neutron-syntax
+* neutron-ui
+* no-caffeine-syntax
 * one-dark-atom
-* one-dark-syntax
-* one-dark-ui
 * one-darker-syntax
-* one-light-syntax
 * one-light-ui
+* pen-paper-coffee-syntax
 * pretty-json
 * racer
+* react
+* script
+* sort-lines
+* url-encode

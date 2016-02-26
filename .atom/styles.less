@@ -1,15 +1,125 @@
-/*
- * Your Stylesheet
- *
- * This stylesheet is loaded when Atom starts up and is reloaded automatically
- * when it is changed.
- *
- * If you are unfamiliar with LESS, you can read more about it here:
- * http://www.lesscss.org
- */
 
-atom-text-editor /deep/ {
-  // .source.js .entity.name {
-  //   color: red;
-  // }
+.tree-view {
+  .directory.expanded > .header {
+    color: #c2d6ff;
+  }
+}
+
+.script-view {
+  height: 150px;
+}
+
+atom-text-editor .vertical-scrollbar,
+atom-text-editor::shadow .vertical-scrollbar {
+  opacity: 0;
+  width: 0;
+}
+
+atom-pane-container atom-pane {
+  padding-top: 0;
+}
+
+atom-text-editor /deep/ span.hyperlink.markup {
+  text-decoration: underline;
+}
+
+atom-text-editor /deep/ span.coffee.string, atom-text-editor /deep/ span.punctuation.string.end, atom-text-editor /deep/ span.punctuation.string.begin {
+  color: #7ABB78;
+}
+
+/*
+atom-text-editor /deep/ span.entity.name.coffee.tag {
+  color: #B570D7;
+}
+
+atom-text-editor /deep/ span.entity.name.function.coffee {
+  color: #FFD9AF;
+} */
+/*
+
+atom-text-editor /deep/ span.variable.coffee {
+  color: #A5CDFC;
+} */
+
+atom-text-editor /deep/ .tag span.coffee.entity.attribute-name {
+  color: #7B9096;
+}
+
+atom-text-editor /deep/ .string span.coffee.embedded.source {
+  color: #859900;
+}
+
+atom-text-editor /deep/ span.coffee.variable.instance {
+  color: #2aa198;
+}
+
+atom-text-editor, atom-text-editor /deep/ .gutter {
+  background-color: #0c1717;
+}
+
+.tree-view {
+  background: #121B1D;
+}
+
+.tree-view .selected:before {
+  background: #192325;
+}
+
+atom-text-editor /deep/ .line.cursor-line, atom-text-editor /deep/ .line-number.cursor-line-no-selection {
+  background: #0D2025;
+}
+
+atom-text-editor /deep/ .gutter, atom-text-editor /deep/ .git-line-modified, atom-text-editor /deep/ .git-line-added {
+  color: #586e75 !important;
+}
+
+atom-text-editor /deep/ .comment {
+  color: #44585E;
+}
+
+atom-text-editor /deep/ .git-line-added {
+  border-left-color: #2E9E56 !important;
+}
+
+atom-text-editor /deep/ .source.js .entity.name {
+  color: #cb4b16;
+}
+
+atom-text-editor::shadow atom-text-editor-minimap, atom-text-editor atom-text-editor-minimap, html atom-text-editor-minimap {
+  opacity: 0.50;
+}
+
+atom-text-editor::shadow atom-text-editor-minimap, atom-text-editor atom-text-editor-minimap {
+  &.absolute {
+    pointer-events: none;
+  }
+}
+
+@gfm-text: #839496;
+@gfm-header: #cb4b16;
+
+atom-text-editor /deep/ .source.gfm {
+  .markup.heading {
+    &.marker {
+      // opacity: 0.5;
+    }
+
+    &.heading-1, &.heading-1 .heading {
+      color: mix(@gfm-text, @gfm-header, 0%);
+      text-decoration: underline;
+    }
+    &.heading-2, &.heading-2 .heading {
+      color: mix(@gfm-text, @gfm-header, 20%);
+      text-decoration: underline;
+    }
+    &.heading-3, &.heading-3 .heading {
+      color: mix(@gfm-text, @gfm-header, 40%);
+    }
+    &.heading-4, &.heading-4 .heading {
+      color: mix(@gfm-text, @gfm-header, 60%);
+    }
+    &.heading-5, &.heading-5 .heading {
+      color: mix(@gfm-text, @gfm-header, 75%);
+    }
+  }
 }

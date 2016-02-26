@@ -1,26 +1,7 @@
 "*":
   core:
     disabledPackages: [
-      "archive-view"
-      "autoflow"
-      "autosave"
-      "background-tips"
-      "bookmarks"
-      "exception-reporting"
-      "image-view"
-      "metrics"
-      "open-on-github"
-      "package-generator"
-      "release-notes"
-      "snippets"
-      "spell-check"
-      "styleguide"
-      "timecop"
-      "update-package-dependencies"
       "welcome"
-      "deprecation-cop"
-      "keybinding-resolver"
-      "linter-jshint"
     ]
     ignoredNames: [
       ".DS_Store"
@@ -41,6 +22,8 @@
     softWrap: true
     softWrapAtPreferredLineLength: true
     useShadowDOM: true
+  metrics:
+    userId: "646e00c1c0a9df20621b06ed7f7251374c38fce8"
   "exception-reporting":
     userId: "9c627fef-ee29-c034-821b-fed2efd80fe4"
   "isotope-ui": {}
@@ -52,17 +35,26 @@
   "linter-scss-lint":
     executablePath: "/usr/local/bin/scss-lint"
   "markdown-preview":
+    breakOnSingleNewline: true
     liveUpdate: false
   minimap:
+    autoToggle: false
     absoluteMode: true
   racer: {}
   "tree-view":
     hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
   whitespace:
     ensureSingleTrailingNewline: false
+
 ".text.todotxt":
   editor:
     autoIndent: true
     preferredLineLength: 120
+
+"source.gfm":
+  editor:
+    preferredLineLength: 120
+    softWrap: true

@@ -1,22 +1,68 @@
-'editor':
-  'preferredLineLength': 120
-  'fontSize': 12
-  'showIndentGuide': false
-  'softTabs': false
-  'showInvisibles': true
-  'softWrapAtPreferredLineLength': true
-  'softWrap': true
-'core':
-  'useReactEditor': true
-  'disabledPackages': [
-    'deprecation-cop'
-    'regex-railroad-diagram'
-  ]
-'exception-reporting':
-  'userId': '9bb4ea3b-88c7-cbe4-669f-0c1f9aecc2d2'
-'welcome':
-  'showOnStartup': false
-'metrics':
-  'userId': '07f995b6fd6528058061b71e6b92cd2bd25c4265'
-'whitespace':
-  'ensureSingleTrailingNewline': false
+"*":
+  core:
+    disabledPackages: [
+      "archive-view"
+      "autoflow"
+      "autosave"
+      "background-tips"
+      "bookmarks"
+      "exception-reporting"
+      "image-view"
+      "metrics"
+      "open-on-github"
+      "package-generator"
+      "release-notes"
+      "snippets"
+      "spell-check"
+      "styleguide"
+      "timecop"
+      "update-package-dependencies"
+      "welcome"
+      "deprecation-cop"
+      "keybinding-resolver"
+      "linter-jshint"
+    ]
+    ignoredNames: [
+      ".DS_Store"
+      "Thumbs.db"
+      ".localized"
+    ]
+    themes: [
+      "one-dark-ui"
+      "solarized-dark-syntax"
+    ]
+  editor:
+    autoIndentOnPaste: false
+    fontSize: 15
+    invisibles: {}
+    preferredLineLength: 120
+    scrollPastEnd: true
+    showInvisibles: true
+    softWrap: true
+    softWrapAtPreferredLineLength: true
+    useShadowDOM: true
+  "exception-reporting":
+    userId: "9c627fef-ee29-c034-821b-fed2efd80fe4"
+  "isotope-ui": {}
+  linter:
+    errorPanelHeight: 58
+    showErrorInline: true
+  "linter-rust":
+    executablePath: "/usr/local/bin/rustc"
+  "linter-scss-lint":
+    executablePath: "/usr/local/bin/scss-lint"
+  "markdown-preview":
+    liveUpdate: false
+  minimap:
+    absoluteMode: true
+  racer: {}
+  "tree-view":
+    hideIgnoredNames: true
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ensureSingleTrailingNewline: false
+".text.todotxt":
+  editor:
+    autoIndent: true
+    preferredLineLength: 120

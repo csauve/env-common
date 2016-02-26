@@ -9,17 +9,24 @@
 #
 # Here's an example taken from Atom's built-in keymap:
 #
-# '.editor':
+# 'atom-text-editor':
 #   'enter': 'editor:newline'
 #
-# '.workspace':
-#   'ctrl-P': 'core:move-up'
+# 'atom-workspace':
+#   'ctrl-shift-p': 'core:move-up'
 #   'ctrl-p': 'core:move-down'
 #
+# You can find more information about keymaps in these guides:
+# * https://atom.io/docs/latest/customizing-atom#customizing-key-bindings
+# * https://atom.io/docs/latest/advanced/keymaps
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it here:
+# https://github.com/bevry/cson#what-is-cson
 
-'.workspace .editor:not(.mini)':
-  'cmd-shift-down': 'editor:move-line-down'
-  'cmd-shift-up': 'editor:move-line-up'
+'atom-workspace atom-text-editor:not(.mini)':
+  'shift-cmd-down': 'editor:move-line-down'
+  'shift-cmd-up': 'editor:move-line-up'
 
-  'alt-shift-down': 'core:select-page-down'
-  'alt-shift-up': 'core:select-page-up'
+'.platform-darwin .editor':
+  'cmd-e': 'emmet:expand-abbreviation'

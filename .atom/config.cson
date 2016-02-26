@@ -22,8 +22,6 @@
     softWrap: true
     softWrapAtPreferredLineLength: true
     useShadowDOM: true
-  metrics:
-    userId: "646e00c1c0a9df20621b06ed7f7251374c38fce8"
   "exception-reporting":
     userId: "9c627fef-ee29-c034-821b-fed2efd80fe4"
   "isotope-ui": {}
@@ -37,9 +35,11 @@
   "markdown-preview":
     breakOnSingleNewline: true
     liveUpdate: false
+  metrics:
+    userId: "646e00c1c0a9df20621b06ed7f7251374c38fce8"
   minimap:
-    autoToggle: false
     absoluteMode: true
+    autoToggle: false
   racer: {}
   "tree-view":
     hideIgnoredNames: true
@@ -48,12 +48,10 @@
     showOnStartup: false
   whitespace:
     ensureSingleTrailingNewline: false
-
 ".text.todotxt":
   editor:
     autoIndent: true
     preferredLineLength: 120
-
 "source.gfm":
   editor:
     preferredLineLength: 120

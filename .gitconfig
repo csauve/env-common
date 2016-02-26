@@ -1,53 +1,55 @@
 [user]
-	name = csauve
-	email = connorsauve@gmail.com
+  name = csauve
+  email = connorsauve@gmail.com
+
 [push]
-	default = simple
+  default = simple
+
 [web]
-	browser = chrome
+  browser = chrome
+
 [core]
-	autocrlf = false
-	excludesfile = /Users/csauve/.gitignore
+  autocrlf = false
+  excludesfile = .gitignore
 
 [http]
-	postBuffer = 524288000
+  postBuffer = 524288000
 
 [color]
-	ui = auto
-	interactive = auto
+  ui = auto
+  interactive = auto
 
 [alias]
-	# workflow
-	back = checkout -
-	pushu = !git push -u
-	bring = merge -
-	s = !git fetch && git status
-	cam = commit -a -m
-	cm = commit -m
-	co = checkout
-	com = checkout master
-	cob = checkout -b
-	rbm = !git fetch && git rebase -i origin/master
-	squash = rebase -i HEAD~2
-	comb = !git checkout master && git merge -
-	ignore = update-index --assume-unchanged
-	notice = update-index --no-assume-unchanged
-	a = add
-	redo = commit --amend
-	undo = reset --soft HEAD~1
-	nuke = reset --hard HEAD~1
-	unstage = reset HEAD --
+  # workflow
+  back = checkout -
+  pushu = !git push -u
+  bring = merge -
+  s = !git fetch && git status
+  cam = commit -a -m
+  co = checkout
+  com = checkout master
+  cob = checkout -b
+  rbm = !git fetch && git rebase -i origin/master
+  squash = rebase -i HEAD~2
+  comb = !git checkout master && git merge -
+  ignore = update-index --assume-unchanged
+  notice = update-index --no-assume-unchanged
+  a = add
+  redo = commit --amend
+  undo = reset --soft HEAD~1
+  nuke = reset --hard HEAD~1
+  unstage = reset HEAD --
 
-	# diffs
-	prev = diff HEAD^ HEAD
-	dword = diff --color-words
-	mermaid = diff --name-only --diff-filter=U
+  # diffs
+  prev = diff HEAD^ HEAD
+  dword = diff --color-words
+  mermaid = diff --name-only --diff-filter=U
 
-	# logs
-	lg = log --graph --pretty=format:'%Cred%h%Creset %C(yellow)%an%d%Creset %s %Cgreen(%cr)%Creset' --date=relative
-	lgl = log --graph --pretty=format:'%Cred%h%Creset %C(yellow)%an%d%Creset %s %Cgreen(%cr)%Creset' --date=relative --numstat
-	sup = log --pretty=format:'%Cred%h%Creset %s %Cgreen(%cr)%Creset' --decorate --since yesterday --author csauve
-	retro = log --pretty=format:'%Cred%h%Creset %s %Cgreen(%cr)%Creset' --decorate --since 3.weeks --author csauve
-	retra = !git for-each-ref --shell --format 'echo %(refname) && git --no-pager retro %(refname)' refs/heads | sh
-	ahead = log --pretty=format:'%Cred%h%Creset %C(yellow)%an%d%Creset %s %Cgreen(%cr)%Creset' --date=relative @{u}..HEAD
-	whodunit = whatchanged -p
+  # logs
+  lg = log --graph --pretty=format:'%Cred%h%Creset %C(yellow)%an%d%Creset %s %Cgreen(%cr)%Creset' --date=relative
+  lgl = log --graph --pretty=format:'%Cred%h%Creset %C(yellow)%an%d%Creset %s %Cgreen(%cr)%Creset' --date=relative --numstat
+  sup = log --pretty=format:'%Cred%h%Creset %s %Cgreen(%cr)%Creset' --decorate --since yesterday --author csauve
+  retro = log --pretty=format:'%Cred%h%Creset %s %Cgreen(%cr)%Creset' --decorate --since 3.weeks --author csauve
+  retra = !git for-each-ref --shell --format 'echo %(refname) && git --no-pager retro %(refname)' refs/heads | sh
+  ahead = log --pretty=format:'%Cred%h%Creset %C(yellow)%an%d%Creset %s %Cgreen(%cr)%Creset' --date=relative @{u}..HEAD
+  whodunit = whatchanged -p

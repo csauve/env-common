@@ -27,7 +27,6 @@ env-common
   .bash_profile
   .gitconfig
   .bashrc
-  hosts
   scripts
     gcon.sh
   ...
@@ -49,8 +48,7 @@ tools
 <!-- similar registry pattern when using other tools -->
 .qwik
   hosts-available
-    common -> ~/env-common/hosts.env
-    specific -> ~/env-specific/hosts.env
+    specific -> ~/env-specific/hosts
 ```
 
 ## registry examples

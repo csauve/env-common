@@ -10,7 +10,7 @@
 
 [core]
   autocrlf = false
-  excludesfile = .gitignore
+  excludesfile = ~/.gitignore
 
 [http]
   postBuffer = 524288000

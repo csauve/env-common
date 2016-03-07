@@ -23,9 +23,11 @@
   # workflow
   back = checkout -
   pushu = !git push -u
+  pum = !git push -u origin master
   bring = merge -
   s = !git fetch && git status
   cam = commit -a -m
+  cami = !git commit -a -m 'Initial commit'
   co = checkout
   com = checkout master
   cob = checkout -b

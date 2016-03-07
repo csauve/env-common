@@ -5,12 +5,20 @@
 [push]
   default = simple
 
+[pack]
+  threads = 1
+  deltaCacheSize = 256m
+  packsizeLimit = 256m
+  windowMemory = 256m
+
 [web]
   browser = chrome
 
 [core]
   autocrlf = false
   excludesfile = ~/.gitignore
+  packedGitLimit = 256m
+  packedGitWindowSize = 256m
 
 [http]
   postBuffer = 524288000

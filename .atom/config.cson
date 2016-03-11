@@ -2,6 +2,7 @@
   core:
     disabledPackages: [
       "welcome"
+      "language-javascript-jsx"
     ]
     ignoredNames: [
       ".DS_Store"
@@ -27,6 +28,10 @@
   linter:
     errorPanelHeight: 58
     showErrorInline: true
+  "linter-jshint":
+    disableWhenNoJshintrcFileInPath: true
+    esversion: 6
+    lintJSXFiles: true
   "linter-rust":
     executablePath: "/usr/local/bin/rustc"
   "linter-scss-lint":

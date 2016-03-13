@@ -47,7 +47,7 @@
   racer: {}
   "tree-view":
     hideIgnoredNames: true
-    hideVcsIgnoredFiles: true
+    hideVcsIgnoredFiles: false
   welcome:
     showOnStartup: false
   whitespace:

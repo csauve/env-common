@@ -3,6 +3,7 @@
     disabledPackages: [
       "welcome"
       "language-javascript-jsx"
+      "linter-scss-lint"
     ]
     ignoredNames: [
       ".DS_Store"

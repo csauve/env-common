@@ -3,6 +3,7 @@
     disabledPackages: [
       "welcome"
       "language-javascript-jsx"
+      "linter-scss-lint"
     ]
     ignoredNames: [
       ".DS_Store"
@@ -39,6 +40,7 @@
   "markdown-preview":
     breakOnSingleNewline: true
     liveUpdate: false
+    useGitHubStyle: true
   metrics:
     userId: "646e00c1c0a9df20621b06ed7f7251374c38fce8"
   minimap:
@@ -47,7 +49,7 @@
   racer: {}
   "tree-view":
     hideIgnoredNames: true
-    hideVcsIgnoredFiles: false
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
   whitespace:

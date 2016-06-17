@@ -1,7 +1,9 @@
 set nu
 syntax on
 filetype indent on
+
 set autoindent
+set expandtab
 set tabstop=2
 
 set listchars=trail:·,precedes:«,extends:»,eol:↲,tab:▸\

@@ -8,7 +8,10 @@ fi
 
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
-export HISTTIMEFORMAT="%Y-%m-%d %T | "
+shopt -s histappend
+export HISTTIMEFORMAT=`echo -e "[\033[90m%Y-%m-%d %T\033[37m]\033[0m "`
+export HISTSIZE=2000
+export HISTFILESIZE=2000
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 export GIT_PS1_SHOWDIRTYSTATE=1

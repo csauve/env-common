@@ -1,4 +1,6 @@
 "*":
+  "activate-power-mode":
+    autoToggle: false
   core:
     disabledPackages: [
       "welcome"
@@ -20,7 +22,7 @@
     preferredLineLength: 120
     scrollPastEnd: true
     showInvisibles: true
-    softWrap: true
+    softWrap: false
     softWrapAtPreferredLineLength: true
     useShadowDOM: true
   "exception-reporting":

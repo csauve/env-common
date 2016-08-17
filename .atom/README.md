@@ -1,5 +1,6 @@
 ## Favourite packages
 * atom-soda-dark-ui
+* activate-power-mode
 * autocomplete-glsl
 * base64
 * color-picker
@@ -38,3 +39,4 @@
 * sort-lines
 * url-encode
 * emmet
+* pigments

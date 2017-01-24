@@ -42,6 +42,7 @@ alias oops='sudo $(history -p \!\!)'
 alias acki="ack -i"
 alias mcint="mvn clean -DskipTests install"
 alias mci="mvn clean install"
+alias rgi="rg -i"
 
 # $1 = pattern; $2 = file to append
 appendToAll() {

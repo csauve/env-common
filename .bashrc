@@ -1,16 +1,20 @@
+source ~/env-common/fasd/fasd
+eval "$(fasd --init auto)"
+alias j="z"
+alias v='f -e vim'
+alias le='f -e less'
+
 source /usr/local/etc/bash_completion.d/git-completion.bash
 source /usr/local/etc/bash_completion.d/git-prompt.sh
-source /usr/local/Cellar/autojump/21.7.1/etc/autojump.sh
 
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    source $(brew --prefix)/etc/bash_completion
+# brew --prefix /etc/bash_completion
+if [ -f /usr/local/etc/bash_completion ]; then
+    source /usr/local/etc/bash_completion
 fi
 
 if [ -f ~/.ssh/known_hosts ]; then
   complete -W "$(echo `cat ~/.ssh/known_hosts | cut -f 1 -d ' ' | sed -e s/,.*//g | uniq | grep -v "\["`;)" ssh
 fi
-
-[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 shopt -s histappend
 export HISTTIMEFORMAT=`echo -e "[\033[90m%Y-%m-%d %T\033[37m]\033[0m "`

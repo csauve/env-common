@@ -40,13 +40,14 @@ alias ll="ls -lh"
 alias lla="ls -lah"
 alias rld=". ~/.bashrc"
 alias psg="ps -ef | grep -i"
-alias hsg="history | grep -i"
+alias hist="history | grep -i"
 alias wat="cat"
 alias oops='sudo $(history -p \!\!)'
 alias acki="ack -i"
 alias mcint="mvn clean -DskipTests install"
 alias mci="mvn clean install"
 alias rgi="rg -i"
+alias hr='printf "%*s" "$(tput cols)" | tr " " "-"'
 
 # $1 = pattern; $2 = file to append
 appendToAll() {

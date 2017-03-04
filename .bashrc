@@ -38,7 +38,9 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWUPSTREAM='verbose git'
 #export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 #http://unix.stackexchange.com/questions/124407/what-color-codes-can-i-use-in-my-ps1-prompt
-export PS1='\[\033[48;5;235m\]\[\033[38;5;249m\] $(date "+%H:%M:%S") \[\033[48;5;141m\]\[\033[38;5;16m\] (╯°□°)╯︵ $(hostname) \[\033[01;48;5;81m\]\[\033[38;5;16m\] \W$(__git_ps1) \[\033[90m\]\[\033[0m\] '
+
+export ps1_color="$((0x$(hostname -s | md5sum | cut -f1 -d' ' | tr -d '\n' | tail -c2)))"
+export PS1='\[\033[48;5;235m\]\[\033[38;5;249m\] $(date "+%H:%M:%S") \[\033[48;5;${ps1_color}m\]\[\033[38;5;16m\] (╯°□°)╯︵ $(hostname -s) \[\033[01;48;5;81m\]\[\033[38;5;16m\] \W$(__git_ps1) \[\033[90m\]\[\033[0m\] '
 export EDITOR="vim"
 export AUTOJUMP_AUTOCOMPLETE_CMDS="$EDITOR"
 export AUTOJUMP_IGNORE_CASE=1
@@ -46,7 +48,7 @@ export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig #libcairo
 SYSTEM_PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 export PATH="$SYSTEM_PATH:~/bin"
 
-launchctl setenv PATH "$PATH"
+command -v launchctl >/dev/null 2>&1 && launchctl setenv PATH "$PATH"
 
 alias l="ls"
 alias ll="ls -lh"

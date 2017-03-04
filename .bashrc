@@ -24,6 +24,10 @@ if [ -f /usr/local/etc/bash_completion ]; then
   source /usr/local/etc/bash_completion
 fi
 
+if [ -f /usr/share/git-core/contrib/completion/git-prompt.sh ]; then
+  source /usr/share/git-core/contrib/completion/git-prompt.sh
+fi
+
 if [ -f ~/.ssh/known_hosts ]; then
   complete -W "$(echo `cat ~/.ssh/known_hosts | cut -f 1 -d ' ' | sed -e s/,.*//g | uniq | grep -v "\["`;)" ssh
 fi

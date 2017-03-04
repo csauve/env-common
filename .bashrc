@@ -1,15 +1,27 @@
-source ~/env-common/fasd/fasd
+# need to update this submodule
+if [ -f ~/env-common/fasd/fasd ]; then
+  source ~/env-common/fasd/fasd
+fi
+
 eval "$(fasd --init auto)"
 alias j="z"
 alias v='f -e vim'
 alias le='f -e less'
 
-source /usr/local/etc/bash_completion.d/git-completion.bash
-source /usr/local/etc/bash_completion.d/git-prompt.sh
+if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
+  source /usr/local/etc/bash_completion.d/git-completion.bash
+fi
 
-# brew --prefix /etc/bash_completion
+if [ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]; then
+  source /usr/local/etc/bash_completion.d/git-prompt.sh
+fi
+
+if [ -f /etc/bash_completion.d/git ]; then
+  source /etc/bash_completion.d/git
+fi
+
 if [ -f /usr/local/etc/bash_completion ]; then
-    source /usr/local/etc/bash_completion
+  source /usr/local/etc/bash_completion
 fi
 
 if [ -f ~/.ssh/known_hosts ]; then
@@ -25,7 +37,8 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWUPSTREAM='verbose git'
 #export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
-export PS1='\[\033[90m\]$(date "+%H:%M:%S")\[\033[37m\] \[\033[36m\]┐(´_｀)┌ ~ \[\033[35m\]\W$(__git_ps1)\[\033[0m\] \$ '
+#http://unix.stackexchange.com/questions/124407/what-color-codes-can-i-use-in-my-ps1-prompt
+export PS1='\[\033[48;5;235m\]\[\033[38;5;249m\] $(date "+%H:%M:%S") \[\033[48;5;141m\]\[\033[38;5;16m\] (╯°□°)╯︵ $(hostname) \[\033[01;48;5;81m\]\[\033[38;5;16m\] \W$(__git_ps1) \[\033[90m\]\[\033[0m\] '
 export EDITOR="vim"
 export AUTOJUMP_AUTOCOMPLETE_CMDS="$EDITOR"
 export AUTOJUMP_IGNORE_CASE=1

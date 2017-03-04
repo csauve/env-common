@@ -44,7 +44,7 @@ export GIT_PS1_SHOWUPSTREAM='verbose git'
 #http://unix.stackexchange.com/questions/124407/what-color-codes-can-i-use-in-my-ps1-prompt
 
 export ps1_color="$((0x$(hostname -s | md5sum | cut -f1 -d' ' | tr -d '\n' | tail -c2)))"
-export PS1='\[\033[48;5;235m\]\[\033[38;5;249m\] $(date "+%H:%M:%S") \[\033[48;5;${ps1_color}m\]\[\033[38;5;16m\] (╯°□°)╯︵ $(hostname -s) \[\033[01;48;5;81m\]\[\033[38;5;16m\] \W$(__git_ps1) \[\033[90m\]\[\033[0m\] '
+export PS1='\[\033[48;5;235m\]\[\033[38;5;249m\]$(date "+%H:%M:%S") \[\033[38;5;${ps1_color}m\](╯°□°)╯︵ $(hostname -s) \[\033[01;38;5;81m\]\W$(__git_ps1)\[\033[90m\]\[\033[0m\] '
 export EDITOR="vim"
 export AUTOJUMP_AUTOCOMPLETE_CMDS="$EDITOR"
 export AUTOJUMP_IGNORE_CASE=1

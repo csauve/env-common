@@ -32,6 +32,25 @@ if [ -f ~/.ssh/known_hosts ]; then
   complete -W "$(echo `cat ~/.ssh/known_hosts | cut -f 1 -d ' ' | sed -e s/,.*//g | uniq | grep -v "\["`;)" ssh
 fi
 
+command_exists() {
+  type "$1" &> /dev/null ;
+}
+
+md5command=md5
+if command_exists md5sum ; then
+  md5command=md5sum
+fi
+
+abs() {
+  [ $1 -lt 0 ] && echo $((-$1)) || echo $1
+}
+
+rng_colors=(076 077 078 079 080 081 153 152 151 150 149 148 220 221 222 223 224 225)
+hostname_hash=$(hostname | $md5command)
+hostname_rng=$((0x${hostname_hash%% *}))
+color_index=$(abs $(expr $hostname_rng % ${#rng_colors[@]}))
+ps1_color=${rng_colors[$color_index]}
+
 shopt -s histappend
 export HISTTIMEFORMAT=`echo -e "[\033[90m%Y-%m-%d %T\033[37m]\033[0m "`
 export HISTSIZE=2000
@@ -40,10 +59,7 @@ export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWUPSTREAM='verbose git'
-#export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 #http://unix.stackexchange.com/questions/124407/what-color-codes-can-i-use-in-my-ps1-prompt
-
-export ps1_color="$((0x$(hostname -s | md5sum | cut -f1 -d' ' | tr -d '\n' | tail -c2)))"
 export PS1='\[\033[48;5;235m\]\[\033[38;5;249m\]$(date "+%H:%M:%S") \[\033[38;5;${ps1_color}m\](╯°□°)╯︵ $(whoami)@$(hostname -s) \[\033[01;38;5;81m\]\W$(__git_ps1)\[\033[90m\]\[\033[0m\] '
 export EDITOR="vim"
 export AUTOJUMP_AUTOCOMPLETE_CMDS="$EDITOR"
@@ -67,6 +83,7 @@ alias mcint="mvn clean -DskipTests install"
 alias mci="mvn clean install"
 alias rgi="rg -i"
 alias hr='printf "%*s" "$(tput cols)" | tr " " "-"'
+alias here='echo "$(whoami)@$(hostname):$(pwd)"'
 
 # $1 = pattern; $2 = file to append
 appendToAll() {

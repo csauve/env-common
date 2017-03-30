@@ -1,3 +1,6 @@
+# do nothing if not interactive
+[[ $- == *i* ]] || return
+
 # need to update this submodule
 if [ -f ~/env-common/fasd/fasd ]; then
   source ~/env-common/fasd/fasd

@@ -28,9 +28,7 @@
   "exception-reporting":
     userId: "9c627fef-ee29-c034-821b-fed2efd80fe4"
   "isotope-ui": {}
-  linter:
-    errorPanelHeight: 58
-    showErrorInline: true
+  linter: {}
   "linter-jshint":
     disableWhenNoJshintrcFileInPath: true
     esversion: 6

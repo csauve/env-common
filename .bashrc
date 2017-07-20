@@ -87,6 +87,7 @@ alias mci="mvn clean install"
 alias rgi="rg -i"
 alias hr='printf "%*s" "$(tput cols)" | tr " " "-"'
 alias here='echo "$(whoami)@$(hostname):$(pwd)"'
+alias pullall='find . -type d -depth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;'
 
 # $1 = pattern; $2 = file to append
 appendToAll() {

@@ -12,14 +12,9 @@
       "Thumbs.db"
       ".localized"
     ]
-    themes: [
-      "one-dark-ui"
-      "solarized-dark-syntax"
-    ]
   editor:
     autoIndentOnPaste: false
     invisibles: {}
-    preferredLineLength: 120
     scrollPastEnd: true
     showInvisibles: true
     softWrap: false
@@ -45,6 +40,7 @@
     userId: "646e00c1c0a9df20621b06ed7f7251374c38fce8"
   minimap:
     absoluteMode: true
+  "one-dark-ui": {}
   racer: {}
   "tree-view":
     hideIgnoredNames: true

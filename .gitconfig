@@ -28,6 +28,7 @@
   interactive = auto
 
 [alias]
+  git = !exec git
   # workflow
   back = checkout -
   pushu = !git push -u

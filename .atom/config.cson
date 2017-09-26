@@ -1,10 +1,12 @@
 "*":
+  Zen:
+    gutter: true
+    minimap: true
   "activate-power-mode":
     autoToggle: false
   core:
     disabledPackages: [
       "welcome"
-      "language-javascript-jsx"
       "linter-scss-lint"
     ]
     ignoredNames: [
@@ -12,16 +14,27 @@
       "Thumbs.db"
       ".localized"
     ]
+    themes: [
+      "pristine-ui"
+      "one-dark-syntax"
+    ]
   editor:
     autoIndentOnPaste: false
     invisibles: {}
     scrollPastEnd: true
-    showInvisibles: true
+    showIndentGuide: true
     softWrap: false
     softWrapAtPreferredLineLength: true
     useShadowDOM: true
   "exception-reporting":
     userId: "9c627fef-ee29-c034-821b-fed2efd80fe4"
+  "fuzzy-finder":
+    ignoredNames: [
+      ".git"
+      "node_modules"
+      "node"
+      "build"
+    ]
   "isotope-ui": {}
   linter: {}
   "linter-jshint":
@@ -35,13 +48,18 @@
   "markdown-preview":
     breakOnSingleNewline: true
     liveUpdate: false
-    useGitHubStyle: true
   metrics:
     userId: "646e00c1c0a9df20621b06ed7f7251374c38fce8"
   minimap:
     absoluteMode: true
+    plugins:
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
   "one-dark-ui": {}
   racer: {}
+  script:
+    enableExecTime: false
+    stopOnRerun: true
   "tree-view":
     hideIgnoredNames: true
     hideVcsIgnoredFiles: true

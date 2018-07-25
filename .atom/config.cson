@@ -3,7 +3,9 @@
     gutter: true
     minimap: true
   "activate-power-mode":
-    autoToggle: false
+    plugins:
+      playAudio: true
+      screenShake: true
   core:
     disabledPackages: [
       "welcome"
@@ -18,6 +20,7 @@
       "pristine-ui"
       "one-dark-syntax"
     ]
+    telemetryConsent: "no"
   editor:
     autoIndentOnPaste: false
     invisibles: {}
@@ -63,15 +66,17 @@
   "tree-view":
     hideIgnoredNames: true
     hideVcsIgnoredFiles: true
+  "exception-reporting":
+    userId: "3bdaa750-492e-412e-8461-86ac82fd2fcd"
+  "linter-ui-default":
+    panelHeight: 69
   welcome:
     showOnStartup: false
-  whitespace:
-    ensureSingleTrailingNewline: false
 ".text.todotxt":
   editor:
     autoIndent: true
     preferredLineLength: 120
 "source.gfm":
   editor:
-    preferredLineLength: 120
+    preferredLineLength: 80
     softWrap: true

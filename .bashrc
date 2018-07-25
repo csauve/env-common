@@ -88,6 +88,8 @@ alias rgi="rg -i"
 alias hr='printf "%*s" "$(tput cols)" | tr " " "-"'
 alias here='echo "$(whoami)@$(hostname):$(pwd)"'
 alias pullall='find . -type d -depth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;'
+alias win32='WINEPREFIX=~/win32 WINEARCH=win32'
+alias win64='WINEPREFIX=~/win64'
 
 # $1 = pattern; $2 = file to append
 appendToAll() {

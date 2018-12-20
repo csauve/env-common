@@ -1,20 +1,23 @@
-set nu
-syntax on
-filetype indent on
+"enable line numbers
+"set nu
 
+"indents
+filetype indent on
 set autoindent
 set expandtab
 set tabstop=2
 
-set listchars=trail:·,precedes:«,extends:»,eol:↲,tab:▸\
-set vb t_vb= " Turn off visual bell, error flash
-"set list!
+"turn off visual bell & flash
+set vb t_vb= 
 
-"highlight WhiteSpace ctermfg=gray
-"match WhiteSpace /./
-
+"ignore case in search
 set ic
+
+"highlight all matches
 set hls
+
+"line breaking
 set lbr
 
+syntax on
 colorscheme delek

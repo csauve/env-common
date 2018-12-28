@@ -16,11 +16,11 @@
       "Thumbs.db"
       ".localized"
     ]
+    telemetryConsent: "no"
     themes: [
       "pristine-ui"
       "one-dark-syntax"
     ]
-    telemetryConsent: "no"
   editor:
     autoIndentOnPaste: false
     invisibles: {}
@@ -30,7 +30,7 @@
     softWrapAtPreferredLineLength: true
     useShadowDOM: true
   "exception-reporting":
-    userId: "9c627fef-ee29-c034-821b-fed2efd80fe4"
+    userId: "3bdaa750-492e-412e-8461-86ac82fd2fcd"
   "fuzzy-finder":
     ignoredNames: [
       ".git"
@@ -48,6 +48,8 @@
     executablePath: "/usr/local/bin/rustc"
   "linter-scss-lint":
     executablePath: "/usr/local/bin/scss-lint"
+  "linter-ui-default":
+    panelHeight: 69
   "markdown-preview":
     breakOnSingleNewline: true
     liveUpdate: false
@@ -66,10 +68,6 @@
   "tree-view":
     hideIgnoredNames: true
     hideVcsIgnoredFiles: true
-  "exception-reporting":
-    userId: "3bdaa750-492e-412e-8461-86ac82fd2fcd"
-  "linter-ui-default":
-    panelHeight: 69
   welcome:
     showOnStartup: false
 ".text.todotxt":

@@ -1,5 +1,5 @@
 function ll
-  if test (which exa)
+  if test (command -s exa)
     exa -l $argv;
   else
     ls -l $argv;

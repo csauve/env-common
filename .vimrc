@@ -6,6 +6,9 @@ filetype indent on
 set autoindent
 set expandtab
 set tabstop=2
+set shiftwidth=2
+
+autocmd FileType rust setlocal shiftwidth=4 tabstop=4
 
 "turn off visual bell & flash
 set vb t_vb= 

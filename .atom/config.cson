@@ -10,6 +10,7 @@
     disabledPackages: [
       "welcome"
       "linter-scss-lint"
+      "linter"
     ]
     ignoredNames: [
       ".DS_Store"
@@ -48,8 +49,7 @@
     executablePath: "/usr/local/bin/rustc"
   "linter-scss-lint":
     executablePath: "/usr/local/bin/scss-lint"
-  "linter-ui-default":
-    panelHeight: 69
+  "linter-ui-default": {}
   "markdown-preview":
     breakOnSingleNewline: true
     liveUpdate: false

@@ -1,5 +1,6 @@
 "enable line numbers
 "set nu
+"highlight LineNr ctermfg=238
 
 "indents
 filetype indent on

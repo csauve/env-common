@@ -22,11 +22,14 @@
       "pristine-ui"
       "one-dark-syntax"
     ]
+  date:
+    dateFormat: "YYYY-MM-DD"
   editor:
     autoIndentOnPaste: false
     invisibles: {}
     scrollPastEnd: true
     showIndentGuide: true
+    showInvisibles: true
     softWrap: false
     softWrapAtPreferredLineLength: true
     useShadowDOM: true
@@ -39,6 +42,8 @@
       "node"
       "build"
     ]
+  "ide-rust":
+    rlsToolchain: "nightly-2019-03-15"
   "isotope-ui": {}
   linter: {}
   "linter-jshint":
@@ -56,7 +61,6 @@
   metrics:
     userId: "646e00c1c0a9df20621b06ed7f7251374c38fce8"
   minimap:
-    absoluteMode: true
     plugins:
       "highlight-selected": true
       "highlight-selectedDecorationsZIndex": 0

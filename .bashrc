@@ -34,7 +34,7 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWUPSTREAM='verbose git'
 #http://unix.stackexchange.com/questions/124407/what-color-codes-can-i-use-in-my-ps1-prompt
-export PS1='\e[90m$(date "+%H:%M:%S") \e[0m\u@$\h \e[95m\W\e[33;1m$(__git_ps1) \e[0m\$ '
+export PS1='\e[90m$(date "+%H:%M:%S") \e[0m\u@\h \e[95m\W\e[33;1m$(__git_ps1) \e[0m\$ '
 export EDITOR="vim"
 export PATH="$PATH:~/bin"
 

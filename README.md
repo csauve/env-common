@@ -51,6 +51,15 @@ tools
     specific -> ~/env-specific/hosts
 ```
 
+## requirements
+Fish config requires the following tools to be tools:
+
+* [fd](https://github.com/sharkdp/fd)
+* [exa](https://github.com/ogham/exa)
+* [fzf](https://github.com/junegunn/fzf)
+* [ripgrep](https://github.com/BurntSushi/ripgrep)
+* [bat](https://github.com/sharkdp/bat)
+
 ## registry examples
 
 ### ~/.bashrc

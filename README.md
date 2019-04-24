@@ -4,7 +4,7 @@ This repo contains my common configs for *nix environments. It's intended that t
 ![](desktop.png)
 
 ## requirements
-Fish config requires the following tools to be tools:
+Fish config requires the following tools to be installed:
 
 * [fd](https://github.com/sharkdp/fd)
 * [exa](https://github.com/ogham/exa)

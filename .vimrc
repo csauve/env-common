@@ -1,6 +1,5 @@
 "enable line numbers
 set nu
-"highlight LineNr ctermfg=238
 
 "indents
 filetype indent on
@@ -38,3 +37,4 @@ inoremap <Up> <C-o>gk
 
 syntax on
 colorscheme delek
+autocmd ColorScheme * highlight LineNr ctermfg=240

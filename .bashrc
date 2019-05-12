@@ -1,25 +1,13 @@
 # do nothing if not interactive
 [[ $- == *i* ]] || return
 
-if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
-  source /usr/local/etc/bash_completion.d/git-completion.bash
-fi
-
-if [ -f /usr/share/git-core/contrib/completion/git-prompt.sh ]; then
-  source /usr/share/git-core/contrib/completion/git-prompt.sh
-fi
-
-if [ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]; then
-  source /usr/local/etc/bash_completion.d/git-prompt.sh
-fi
-
-if [ -f /etc/bash_completion.d/git ]; then
-  source /etc/bash_completion.d/git
-fi
-
-if [ -f /usr/local/etc/bash_completion ]; then
-  source /usr/local/etc/bash_completion
-fi
+# try loading bash completions
+[ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
+[ -r /usr/local/etc/bash_completion.d/git-completion.bash ] && . /usr/local/etc/bash_completion.d/git-completion.bash
+[ -r /usr/share/git-core/contrib/completion/git-prompt.sh ] && . /usr/share/git-core/contrib/completion/git-prompt.sh
+[ -r /usr/local/etc/bash_completion.d/git-prompt.sh ] && .  /usr/local/etc/bash_completion.d/git-prompt.sh
+[ -r /etc/bash_completion.d/git ] && . /etc/bash_completion.d/git
+[ -r /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 if [ -f ~/.ssh/known_hosts ]; then
   complete -W "$(echo `cat ~/.ssh/known_hosts | cut -f 1 -d ' ' | sed -e s/,.*//g | uniq | grep -v "\["`;)" ssh

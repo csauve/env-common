@@ -1,5 +1,5 @@
 "enable line numbers
-"set nu
+set nu
 "highlight LineNr ctermfg=238
 
 "indents
@@ -22,6 +22,19 @@ set hls
 
 "line breaking
 set lbr
+set wrap lbr "wrap on words
+
+"move by display lines for wrapping
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
+nnoremap <Down> gj
+nnoremap <Up> gk
+vnoremap <Down> gj
+vnoremap <Up> gk
+inoremap <Down> <C-o>gj
+inoremap <Up> <C-o>gk
 
 syntax on
 colorscheme delek

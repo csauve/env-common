@@ -3,6 +3,8 @@ This repo contains my common configs for *nix environments. It's intended that t
 
 ![](desktop.png)
 
+The repo includes a modified version of the [Mononoki font](https://github.com/madmalik/mononoki).
+
 ## requirements
 Fish config requires the following tools to be installed:
 

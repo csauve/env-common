@@ -1,6 +1,6 @@
 function lt
   if test (command -s exa)
-    exa -Tl $argv;
+    exa -Tl --git-ignore $argv;
   else
     tree $argv;
   end	

@@ -11,6 +11,8 @@
       "welcome"
       "linter-scss-lint"
       "linter"
+      "linter-ui-default"
+      "linter-eslint"
     ]
     ignoredNames: [
       ".DS_Store"
@@ -43,6 +45,7 @@
       "build"
     ]
   "ide-rust": {}
+  "ide-typescript": {}
   "isotope-ui": {}
   linter: {}
   "linter-jshint":
@@ -53,7 +56,8 @@
     executablePath: "/usr/local/bin/rustc"
   "linter-scss-lint":
     executablePath: "/usr/local/bin/scss-lint"
-  "linter-ui-default": {}
+  "linter-ui-default":
+    panelHeight: 515
   "markdown-preview":
     breakOnSingleNewline: true
     liveUpdate: false

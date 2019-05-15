@@ -40,4 +40,5 @@ inoremap <Up> <C-o>gk
 syntax on
 colorscheme delek
 autocmd ColorScheme * hi LineNr ctermfg=240
+autocmd ColorScheme * hi CursorLineNR ctermfg=245
 autocmd ColorScheme * hi CursorLine cterm=NONE ctermbg=235

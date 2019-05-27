@@ -11,6 +11,6 @@ xrandr --output HDMI-0 --primary
 xset r rate 200 30
 
 #screensaver off
-xset s off
+xset s off -dpms
 
 exec i3

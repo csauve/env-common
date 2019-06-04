@@ -11,7 +11,7 @@
 #output "DVI-I-1" pos 0 0 res 1280x1024
 #output "HDMI-A-1" pos 1280 0 res 1920x1080
 #output "DVI-D-1" pos 3200 0 res 1280x1024
-#output "*" background  solid_color
+#output "*" background {{content.active.bg}} solid_color
 
 set $mod Mod4
 # Font for window titles. Will also be used by the bar unless a different font
@@ -159,21 +159,21 @@ bar {
    tray_output HDMI-0
 
    colors {
-        statusline #666666
-        background #181818
+        statusline {{content.faded}}
+        background {{window.bg}}
 
         #color class       border  back.   text
-        focused_workspace  #17838c #17838c #181818
-        active_workspace   #181818 #181818 #666666
-        inactive_workspace #181818 #181818 #666666
-        urgent_workspace   #e1311c #e1311c #181818
+        focused_workspace  {{notice.border.focused}} {{notice.bg.focused}} {{notice.fg.focused}}
+        active_workspace   {{notice.border.active}} {{notice.bg.active}} {{notice.fg.active}}
+        inactive_workspace {{notice.border.inactive}} {{notice.bg.inactive}} {{notice.fg.inactive}}
+        urgent_workspace   {{notice.border.urgent}} {{notice.bg.urgent}} {{notice.fg.urgent}}
     }
 }
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #17838c #181818 #f1fcf9 #2a2a2a #17838c
-client.focused_inactive #2a2a2a #181818 #f1fcf9 #2a2a2a #2a2a2a
-client.unfocused        #2a2a2a #181818 #f1fcf9 #2a2a2a #2a2a2a
-client.urgent           #e1311c #181818 #f1fcf9 #2a2a2a #e1311c
-client.placeholder      #2a2a2a #181818 #f1fcf9 #2a2a2a #2a2a2a
-client.background       #181818
+client.focused          {{window.border.focused}} {{window.bg}} {{window.fg}} {{window.border.indicator}} {{window.border.focused}}
+client.focused_inactive {{window.border.active}} {{window.bg}} {{window.fg}} {{window.border.indicator}} {{window.border.active}}
+client.unfocused        {{window.border.inactive}} {{window.bg}} {{window.fg}} {{window.border.indicator}} {{window.border.inactive}}
+client.urgent           {{window.border.urgent}} {{window.bg}} {{window.fg}} {{window.border.indicator}} {{window.border.urgent}}
+client.placeholder      {{window.border.inactive}} {{window.bg}} {{window.fg}} {{window.border.indicator}} {{window.border.inactive}}
+client.background       {{window.bg}}

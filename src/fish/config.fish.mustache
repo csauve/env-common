@@ -1,0 +1,38 @@
+set __fish_git_prompt_showdirtystate 'yes'
+set __fish_git_prompt_showstashstate 'yes'
+set __fish_git_prompt_showuntrackedfiles 'yes'
+set __fish_git_prompt_showupstream 'verbose'
+set __fish_git_prompt_color_branch yellow
+set __fish_git_prompt_color_upstream_ahead green
+set __fish_git_prompt_color_upstream_behind red
+
+set fish_color_normal "{{content.fg}}" #the default color
+set fish_color_command "{{blue}}" #the color for commands
+set fish_color_quote "{{green}}" #the color for quoted blocks of text
+set fish_color_redirection "{{magenta}}" #the color for IO redirections
+set fish_color_end "{{yellow}}" #the color for process separators like ';' and '&'
+set fish_color_error "{{red}}" #the color used to highlight potential errors
+set fish_color_param "{{cyan}}" #the color for regular command parameters
+set fish_color_comment "{{content.faded}}" #the color used for code comments
+set fish_color_match "{{notice.fg.focused}}" #the color used to highlight matching parenthesis
+set fish_color_selection "{{content.accent}}" #the color used when selecting text (in vi visual mode)
+set fish_color_search_match "{{notice.fg.focused}}" #used to highlight history search matches and the selected pager item (must be a background)
+set fish_color_operator "{{magenta}}" #the color for parameter expansion operators like '*' and '~'
+set fish_color_escape "{{yellow}}" #the color used to highlight character escapes like '\n' and '\x70'
+set fish_color_autosuggestion "{{content.faded}}" #the color used for autosuggestions
+set fish_color_cancel "{{content.faded}}" #the color for the '^C' indicator on a canceled command
+
+
+set c_faded "{{content.faded}}"
+set c_primary "{{content.accent}}"
+set c_primary_faded "{{content.accent_faded}}"
+set c_secondary "{{content.fg}}"
+set c_secondary_faded "{{content.faded}}"
+
+function print_c
+  set_color $argv[1]
+  echo -n $argv[2]
+  set_color normal
+end
+
+set cwd_hist_file ~/.cwdhist

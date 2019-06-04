@@ -60,11 +60,11 @@ font_size 14
 
 #: Cursor customization
 
-cursor #f1fcf9
+cursor {{content.fg}}
 
 #: Default cursor color
 
-cursor_text_color #181818
+cursor_text_color {{content.bg}}
 
 #: Choose the color of text under the cursor. If you want it rendered
 #: with the background color of the cell underneath instead, use the
@@ -131,7 +131,7 @@ cursor_text_color #181818
 
 #: Mouse
 
-# url_color #db86ba
+# url_color {{content.accent}}
 # url_style curly
 
 #: The color and style for highlighting URLs on mouse-over. url_style
@@ -299,15 +299,15 @@ window_margin_width 8.0
 #: The window padding (in pts) (blank area between the text and the
 #: window border)
 
-# active_border_color #2a2a2a
+# active_border_color {{window.border.active}}
 
 #: The color for the border of the active window
 
-# inactive_border_color #2a2a2a
+# inactive_border_color {{window.border.inactive}}
 
 #: The color for the border of inactive windows
 
-# bell_border_color #e1311c
+# bell_border_color {{window.border.urgent}}
 
 #: The color for the border of inactive windows in which a bell has
 #: occurred
@@ -368,8 +368,8 @@ inactive_tab_font_style normal
 
 #: Color scheme
 
-foreground #f1fcf9
-background #181818
+foreground {{content.fg}}
+background {{content.bg}}
 
 #: The foreground and background colors
 
@@ -397,8 +397,8 @@ background_opacity         1.00
 #: How much to dim text that has the DIM/FAINT attribute set. One
 #: means no dimming and zero means fully dimmed (i.e. invisible).
 
-selection_foreground #181818
-selection_background #17838c
+selection_foreground {{notice.fg.focused}}
+selection_background {{notice.bg.focused}}
 
 #: The foreground and background for text selected with the mouse
 
@@ -408,43 +408,43 @@ selection_background #17838c
 #: the 256 color table as color16 to color255.
 
 
-color0 #181818
-color8 #181818
+color0 {{black}}
+color8 {{black}}
 
 #: black
 
-color1 #e1311c
-color9 #e1311c
+color1 {{red}}
+color9 {{red}}
 
 #: red
 
-color2  #74dc90
-color10 #74dc90
+color2  {{green}}
+color10 {{green}}
 
 #: green
 
-color3  #fdc198
-color11 #fdc198
+color3  {{yellow}}
+color11 {{yellow}}
 
 #: yellow
 
-color4  #3da0bf
-color12 #3da0bf
+color4  {{blue}}
+color12 {{blue}}
 
 #: blue
 
-color5  #db86ba
-color13 #db86ba
+color5  {{magenta}}
+color13 {{magenta}}
 
 #: magenta
 
-color6  #62cdcd
-color14 #62cdcd
+color6  {{cyan}}
+color14 {{cyan}}
 
 #: cyan
 
-color7  #f1fcf9
-color15 #f1fcf9
+color7  {{white}}
+color15 {{white}}
 
 #: white
 

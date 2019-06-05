@@ -13,6 +13,6 @@ xset r rate 200 30
 #screensaver off
 xset s off -dpms
 
-feh --bg-fill 1555982471728.jpg
+feh --bg-fill ~/pictures/wallpapers/1555982471728.jpg
 
 exec i3

@@ -8,8 +8,8 @@
 
 general {
   colors = true
-  color_good = "#74dc90"
-  color_bad = "#e1311c"
+  color_good = "#6bdba1"
+  color_bad = "#c82438"
   interval = 1
   output_format = "none"
   separator = " / "

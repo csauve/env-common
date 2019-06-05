@@ -1,23 +1,23 @@
 const c = {
-  black: "#181818",
-  dark_gray: "#2a2a2a",
-  gray: "#444444",
+  black: "#0f111e",
+  dark_gray: "#111926",
+  gray: "#263e48",
   light_gray: "#666666",
   // black_bright: "#767676",
   // red_dark: "#440124",
-  red: "#e1311c",
+  red: "#c82438",
   // green_dark: "#17794d",
-  green: "#74dc90",
+  green_dark: "#9b1e2e",
+  green: "#6bdba1",
   // yellow_dark: "#792b17",
   yellow: "#fdc198",
   // blue_dark: "#2e3c49",
   blue: "#3da0bf",
   // magenta_dark: "#793d71",
   magenta: "#db86ba",
-  cyan_dark: "#17838c",
   cyan: "#62cdcd",
   // white_dark: "#aaaaaa",
-  white: "#f1fcf9",
+  white: "#bad2d6",
   transparent: "#00000000"
 };
 
@@ -36,7 +36,7 @@ console.log(JSON.stringify({
     fg: c.white,
     bg: c.black,
     border: {
-      focused: c.cyan_dark,
+      focused: c.green_dark,
       active: c.dark_gray,
       inactive: c.dark_gray,
       indicator: c.dark_gray,
@@ -45,7 +45,7 @@ console.log(JSON.stringify({
   },
   notice: {
     border: {
-      focused: c.cyan_dark,
+      focused: c.green_dark,
       active: c.black,
       inactive: c.black,
       urgent: c.red,
@@ -57,7 +57,7 @@ console.log(JSON.stringify({
       urgent: c.black,
     },
     bg: {
-      focused: c.cyan_dark,
+      focused: c.green_dark,
       active: c.black,
       inactive: c.black,
       urgent: c.red,

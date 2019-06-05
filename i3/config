@@ -160,20 +160,20 @@ bar {
 
    colors {
         statusline #666666
-        background #181818
+        background #0f111e
 
         #color class       border  back.   text
-        focused_workspace  #17838c #17838c #181818
-        active_workspace   #181818 #181818 #666666
-        inactive_workspace #181818 #181818 #666666
-        urgent_workspace   #e1311c #e1311c #181818
+        focused_workspace  #9b1e2e #9b1e2e #0f111e
+        active_workspace   #0f111e #0f111e #666666
+        inactive_workspace #0f111e #0f111e #666666
+        urgent_workspace   #c82438 #c82438 #0f111e
     }
 }
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #17838c #181818 #f1fcf9 #2a2a2a #17838c
-client.focused_inactive #2a2a2a #181818 #f1fcf9 #2a2a2a #2a2a2a
-client.unfocused        #2a2a2a #181818 #f1fcf9 #2a2a2a #2a2a2a
-client.urgent           #e1311c #181818 #f1fcf9 #2a2a2a #e1311c
-client.placeholder      #2a2a2a #181818 #f1fcf9 #2a2a2a #2a2a2a
-client.background       #181818
+client.focused          #9b1e2e #0f111e #bad2d6 #111926 #9b1e2e
+client.focused_inactive #111926 #0f111e #bad2d6 #111926 #111926
+client.unfocused        #111926 #0f111e #bad2d6 #111926 #111926
+client.urgent           #c82438 #0f111e #bad2d6 #111926 #c82438
+client.placeholder      #111926 #0f111e #bad2d6 #111926 #111926
+client.background       #0f111e

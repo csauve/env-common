@@ -5,9 +5,9 @@ This repo contains my common configs for *nix environments. It's intended that t
 
 The repo includes a modified version of the [Mononoki font](https://github.com/madmalik/mononoki).
 
-## requirements
-Fish config requires the following tools to be installed:
+## dependencies
 
+* [ttf-font-awesome-4](https://aur.archlinux.org/packages/ttf-font-awesome-4/)
 * [fd](https://github.com/sharkdp/fd)
 * [exa](https://github.com/ogham/exa)
 * [fzf](https://github.com/junegunn/fzf)

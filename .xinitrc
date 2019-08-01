@@ -15,4 +15,5 @@ xset s off -dpms
 
 feh --bg-fill ~/pictures/wallpapers/1555982471728.jpg
 
+xrandr --dpi 80
 exec i3

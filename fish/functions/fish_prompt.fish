@@ -14,7 +14,8 @@ function fish_prompt
   if test -n "$SSH_CONNECTION" -o (whoami) = root
     print_c $c_secondary (whoami)"@"(hostname -s)" "
   else
-    print_c $c_secondary "(　ﾟ∀ﾟ)っ "
+    print_c $c_secondary "╮( ° ᴗ °)╭ "
+    #print_c $c_secondary "(　ﾟ∀ﾟ)っ "
   end
   #print_c $c_faded [$dir_sig]
   print_c $c_faded $pwd_dir

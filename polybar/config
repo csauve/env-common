@@ -1,0 +1,109 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/polybar/polybar
+;
+;   The README contains a lot of information
+;
+;==========================================================
+
+[colors]
+;background = ${xrdb:color0:#222}
+background = #222
+background-alt = #444
+;foreground = ${xrdb:color7:#222}
+foreground = #dfdfdf
+foreground-alt = #555
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+
+[settings]
+screenchange-reload = true
+;pseudo-transparency = true
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+wm-restack = i3
+
+[bar/base]
+;fix transparency
+override-redirect = true
+background = #e60f111e
+foreground = #bad2d6
+line-size = 0
+border-size = 4
+border-color = #111926
+padding-right = 2
+padding-left = 2
+module-margin = 2
+font-0 = Mononoki:pixelsize=14;2
+font-1 = FontAwesome:pixelsize=14;3
+dpi-x = 80
+dpi-y = 80
+
+[bar/saturn]
+inherit = bar/base
+bottom = true
+width = 800
+offset-x = 12
+offset-y = 12
+modules-left = date volume free
+modules-right = title workspace
+
+[module/title]
+type = internal/xwindow
+label-maxlen = 30
+
+[module/workspace]
+type = internal/i3
+pin-workspaces = true
+enable-click = true
+label-focused-foreground = #c82438
+label-padding = 0
+label-urgent-foreground = 
+label-separator = " "
+label-separator-padding = 0
+
+[module/volume]
+type = internal/pulseaudio
+mapped = true
+label-muted =  Mute
+label-muted-foreground = #c82438
+format-muted = <label-muted>
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-foreground = #6bdba1
+format-volume = <ramp-volume> <label-volume>
+
+[module/free]
+type = internal/fs
+mount-0 = /
+interval = 10
+fixed-values = true
+label-mounted = %free%
+format-mounted-prefix = " "
+format-mounted-prefix-foreground = #fdc198
+format-mounted = <label-mounted>
+
+[module/date]
+type = internal/date
+interval = 1
+date = "%a %b %d"
+time = %H:%M:%S
+format-prefix =   
+format-prefix-foreground = #3da0bf
+label = " %time%, %date%"
+
+; vim:ft=dosini

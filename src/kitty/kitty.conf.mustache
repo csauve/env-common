@@ -23,7 +23,7 @@ bold_italic_font auto
 #:     italic_font      Operator Mono Book Italic
 #:     bold_italic_font Operator Mono Medium Italic
 
-font_size 14
+font_size {{font_size}}
 
 #: Font size (in pts)
 
@@ -284,7 +284,7 @@ visual_bell_duration 0.1
 #: that setting a non-zero window margin overrides this and causes all
 #: borders to be drawn.
 
-window_margin_width 12.0
+window_margin_width {{width_normal}}
 
 #: The window margin (in pts) (blank area outside the border)
 
@@ -355,11 +355,11 @@ tab_separator " │ "
 #: The separator between tabs in the tab bar when using separator as
 #: the tab_bar_style.
 
-active_tab_foreground   #000
-active_tab_background   #999
+active_tab_foreground   {{content.bg}}
+active_tab_background   {{content.fg}}
 active_tab_font_style   normal
-inactive_tab_foreground #999
-inactive_tab_background #000
+inactive_tab_foreground {{content.fg}}
+inactive_tab_background {{content.bg}}
 inactive_tab_font_style normal
 
 #: Tab bar colors and styles
@@ -373,7 +373,7 @@ background {{content.bg}}
 
 #: The foreground and background colors
 
-background_opacity         1.00
+background_opacity         {{content.bg_opacity}}
 # dynamic_background_opacity no
 
 #: The opacity of the background. A number between 0 and 1, where 1 is

@@ -1,7 +1,7 @@
 "enable line numbers
 set nu
 
-set cursorline
+"set cursorline
 
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0

@@ -5,6 +5,7 @@ function cwd_hist
 end
 
 function fish_prompt
+  set prev_status $status
   cwd_hist
 
   #set dir_sig (string join "" (exa -la | string sub -l 1 | sort | uniq -c) | string replace -a " " "" | string replace -a "." "f")
@@ -14,8 +15,12 @@ function fish_prompt
   if test -n "$SSH_CONNECTION" -o (whoami) = root
     print_c $c_secondary (whoami)"@"(hostname -s)" "
   else
-    print_c $c_secondary "╮( ° ᴗ °)╭ "
-    #print_c $c_secondary "(　ﾟ∀ﾟ)っ "
+    if test $prev_status -eq 0
+      print_c $c_secondary "( ° ᴗ °)っ "
+    else
+      set eye (print_c $fish_color_error "°")
+      print_c $c_secondary "( "$eye" - "$eye")っ "
+    end
   end
   #print_c $c_faded [$dir_sig]
   print_c $c_faded $pwd_dir

@@ -1,12 +1,19 @@
-# build an index with fd -a --type d -E "node_modules" -E "htdocs" -E "Library" > ~/.cwdhist
 function j
   set term $argv[1]
-  set result (grep -i $term $cwd_hist_file | awk '{print length, $0}' | sort -n | head -n 1 | cut -d" " -f2-)
-  if test -d $result
-    cd $result
+  set result
+  if test -n "$term"
+    set result (cat $cwd_hist_file | sk -f $term 2> /dev/null | head -n 1 | awk -F ' ' '{print $2}')
   else
-    echo "Directory $result does not exist"
-    #grep -v $result $cwd_hist_file > $cwd_hist_file
+    set result (cat $cwd_hist_file | sk)
   end
-  echo $result
+
+  if test -n "$result"
+    if test -d $result
+      cd $result
+    else
+      echo "Directory $result does not exist"
+      fd . ~ -t d > $cwd_hist_file
+    end
+    echo $result
+  end
 end

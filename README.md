@@ -10,7 +10,7 @@ The repo includes a modified version of the [Mononoki font](https://github.com/m
 * [ttf-font-awesome-4](https://aur.archlinux.org/packages/ttf-font-awesome-4/)
 * [fd](https://github.com/sharkdp/fd)
 * [exa](https://github.com/ogham/exa)
-* [fzf](https://github.com/junegunn/fzf)
+* [skim](https://github.com/lotabout/skim)
 * [ripgrep](https://github.com/BurntSushi/ripgrep)
 * [bat](https://github.com/sharkdp/bat)
 

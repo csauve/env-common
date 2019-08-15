@@ -1,4 +1,4 @@
-#!/usr/bin/fish
+#!/usr/bin/env fish
 
 set IMG_WIDTH 58
 set IMG_HEIGHT 36

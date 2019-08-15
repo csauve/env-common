@@ -4,7 +4,7 @@ function j
   if test -n "$term"
     set result (cat $cwd_hist_file | sk -f $term 2> /dev/null | head -n 1 | awk -F ' ' '{print $2}')
   else
-    set result (cat $cwd_hist_file | sk)
+    set result (cat $cwd_hist_file | sk --ansi --preview "exa --color=always -l {}")
   end
 
   if test -n "$result"

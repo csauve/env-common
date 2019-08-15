@@ -1,0 +1,15 @@
+min_peers = 160
+max_peers = 640 
+min_peers_seed = 40 
+max_peers_seed = 320 
+max_uploads = 20 
+download_rate = 10000
+upload_rate = 1000
+directory = ~/downloads/
+port_range = 64885-64885 
+port_random = no
+check_hash = yes 
+encryption = allow_incoming,try_outgoing,enable_retry
+session = ~/.rtorrent.session
+dht = auto
+dht_port = 6881

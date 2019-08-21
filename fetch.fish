@@ -32,7 +32,7 @@ info "Kernel" (pacman -Q linux)
 info "Packages" (pacman -Q | wc -l)
 info "WM" "i3-gaps-next-git"
 info "Bar" (pacman -Q polybar)
-info "Compositor" "compton-tyrone-git"
+info "Compositor" "compton-tryone-git"
 info "Shell" (pacman -Q fish)
 info "Terminal" (pacman -Q kitty)
 info "Font" "Mononoki (edit)"

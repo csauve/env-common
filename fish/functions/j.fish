@@ -9,7 +9,7 @@ function j
 
   if test -n "$result"
     if test -d $result
-      cd $result
+      cd "$result"
     else
       echo "Directory $result does not exist"
       fd . ~ -t d > $cwd_hist_file

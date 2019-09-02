@@ -8,12 +8,12 @@ function j
   end
 
   if test -n "$result"
-    if test -d $result
+    if test -d "$result"
       cd "$result"
     else
       echo "Directory $result does not exist"
       fd . ~ -t d > $cwd_hist_file
     end
-    echo $result
+    echo "$result"
   end
 end

@@ -38,7 +38,7 @@ wm-restack = i3
 
 [bar/base]
 ;fix transparency
-override-redirect = true
+;override-redirect = true
 background = {{content.bg_transparent}}
 foreground = {{content.fg}}
 line-size = 0
@@ -55,15 +55,12 @@ dpi-y = {{dpi}}
 [bar/saturn]
 inherit = bar/base
 bottom = true
-width = 800
-offset-x = {{width_normal}}
-offset-y = {{width_normal}}
-modules-left = date volume free
-modules-right = title workspace
+modules-left = workspace title
+modules-right = free volume date
 
 [module/title]
 type = internal/xwindow
-label-maxlen = 30
+label-maxlen = 80
 
 [module/workspace]
 type = internal/i3

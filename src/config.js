@@ -15,7 +15,6 @@ const c = {
   white: "#bad2d6",
   width_small: 4,
   width_normal: 12,
-  width_bar: 36 + 8,
   font: "Mononoki",
   font_icons: "FontAwesome",
   font_size: 14,

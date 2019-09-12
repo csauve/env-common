@@ -1,6 +1,6 @@
 #!/usr/bin/env fish
 
-set IMG_WIDTH 58
+set IMG_WIDTH 32
 set IMG_HEIGHT 36
 set INFO_HDR_WIDTH 12
 
@@ -36,7 +36,7 @@ info "Compositor" "compton-tryone-git"
 info "Shell" (pacman -Q fish)
 info "Terminal" (pacman -Q kitty)
 info "Font" "Mononoki (edit)"
-info "Papes" "Leonid Kolyagin"
+info "Papes" "Fernando Correa"
 info "CPU" "i7-2600K @ 3.40GHz"
 info "Memory" "8GB"
 info "GPU" "GTX 660 Ti"

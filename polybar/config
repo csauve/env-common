@@ -42,10 +42,11 @@ wm-restack = i3
 background = #e60f111e
 foreground = #bad2d6
 line-size = 0
-border-size = 4
-border-color = #111926
+height = 38
+;border-size = 4
+;border-color = #111926
 padding-right = 2
-padding-left = 2
+padding-left = 1
 module-margin = 2
 font-0 = Mononoki:pixelsize=14;2
 font-1 = FontAwesome:pixelsize=14;3

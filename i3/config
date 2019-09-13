@@ -30,16 +30,11 @@ bindsym XF86AudioLowerVolume exec pulsemixer --change-volume -5 --unmute
 bindsym XF86AudioMute exec pulsemixer --toggle-mute
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
-
-# alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
+bindsym $mod+Tab focus right
 
 # move focused window
 bindsym $mod+Shift+j move left

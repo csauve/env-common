@@ -31,7 +31,7 @@
   git = !exec git
   # workflow
   back = checkout -
-  pushu = !git push -u
+  pushu = !git push -u origin $(git rev-parse --abbrev-ref HEAD)
   bring = merge -
   s = !git fetch && git status
   cam = commit -a -m

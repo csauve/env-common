@@ -39,6 +39,7 @@ console.log(JSON.stringify({
   window: {
     fg: c.white,
     bg: c.black,
+    bg_transparent: "#11111111",
     border: {
       focused: c.red,
       active: c.dark_gray,

@@ -147,10 +147,10 @@ gaps inner {{width_normal}}
 smart_gaps on
 smart_borders on
 
-# class                 border  backgr. text    indicator child_border
-client.focused          {{window.border.focused}} {{window.bg}} {{window.fg}} {{window.border.indicator}} {{window.border.focused}}
-client.focused_inactive {{window.border.active}} {{window.bg}} {{window.fg}} {{window.border.indicator}} {{window.border.active}}
-client.unfocused        {{window.border.inactive}} {{window.bg}} {{window.fg}} {{window.border.indicator}} {{window.border.inactive}}
-client.urgent           {{window.border.urgent}} {{window.bg}} {{window.fg}} {{window.border.indicator}} {{window.border.urgent}}
-client.placeholder      {{window.border.inactive}} {{window.bg}} {{window.fg}} {{window.border.indicator}} {{window.border.inactive}}
+# class                 tab border                    background    tab text                ?                           window border
+client.focused          {{window.border.inactive}}    {{window.bg}} {{content.fg_focused}}  {{window.border.indicator}} {{window.border.focused}}
+client.focused_inactive {{window.border.active}}      {{window.bg}} {{window.fg}}           {{window.border.indicator}} {{window.border.active}}
+client.unfocused        {{window.border.inactive}}    {{window.bg}} {{window.fg}}           {{window.border.indicator}} {{window.border.inactive}}
+client.urgent           {{window.border.urgent}}      {{window.bg}} {{window.fg}}           {{window.border.indicator}} {{window.border.urgent}}
+client.placeholder      {{window.border.inactive}}    {{window.bg}} {{window.fg}}           {{window.border.indicator}} {{window.border.inactive}}
 client.background       {{window.bg}}

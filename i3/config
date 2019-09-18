@@ -147,10 +147,10 @@ gaps inner 12
 smart_gaps on
 smart_borders on
 
-# class                 border  backgr. text    indicator child_border
-client.focused          #c82438 #0f111e #bad2d6 #111926 #c82438
-client.focused_inactive #111926 #0f111e #bad2d6 #111926 #111926
-client.unfocused        #111926 #0f111e #bad2d6 #111926 #111926
-client.urgent           #c82438 #0f111e #bad2d6 #111926 #c82438
-client.placeholder      #111926 #0f111e #bad2d6 #111926 #111926
+# class                 tab border                    background    tab text                ?                           window border
+client.focused          #111926    #0f111e #c82438  #111926 #c82438
+client.focused_inactive #111926      #0f111e #bad2d6           #111926 #111926
+client.unfocused        #111926    #0f111e #bad2d6           #111926 #111926
+client.urgent           #c82438      #0f111e #bad2d6           #111926 #c82438
+client.placeholder      #111926    #0f111e #bad2d6           #111926 #111926
 client.background       #0f111e

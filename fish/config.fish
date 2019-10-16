@@ -14,9 +14,9 @@ set fish_color_end "#fdc198" #the color for process separators like ';' and '&'
 set fish_color_error "#c82438" #the color used to highlight potential errors
 set fish_color_param "#62cdcd" #the color for regular command parameters
 set fish_color_comment "#666666" #the color used for code comments
-set fish_color_match "#0f0f0f" #the color used to highlight matching parenthesis
+set fish_color_match "#0f111e" #the color used to highlight matching parenthesis
 set fish_color_selection "#db86ba" #the color used when selecting text (in vi visual mode)
-set fish_color_search_match "#0f0f0f" #used to highlight history search matches and the selected pager item (must be a background)
+set fish_color_search_match "#0f111e" #used to highlight history search matches and the selected pager item (must be a background)
 set fish_color_operator "#db86ba" #the color for parameter expansion operators like '*' and '~'
 set fish_color_escape "#fdc198" #the color used to highlight character escapes like '\n' and '\x70'
 set fish_color_autosuggestion "#666666" #the color used for autosuggestions

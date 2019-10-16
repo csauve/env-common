@@ -39,7 +39,7 @@ wm-restack = i3
 [bar/base]
 ;fix transparency
 ;override-redirect = true
-background = #e60f0f0f
+background = #e60f111e
 foreground = #bad2d6
 line-size = 0
 height = 38

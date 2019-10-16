@@ -138,19 +138,19 @@ for_window [window_role="bubble"] floating enable
 for_window [window_role="task_dialog"] floating enable
 for_window [window_role="Preferences"] floating enable
 
-workspace 1 output "DVI-I-1"
+workspace 1 output "HDMI-0"
 workspace 2 output "HDMI-0"
-workspace 3 output "DVI-D-1"
-workspace 4 output "HDMI-0"
+workspace 3 output "HDMI-0"
+workspace 4 output "DVI-I-1"
 
 gaps inner 12
 smart_gaps on
 smart_borders on
 
 # class                 tab border                    background    tab text                ?                           window border
-client.focused          #111926    #0f0f0f #c82438  #111926 #c82438
-client.focused_inactive #111926      #0f0f0f #bad2d6           #111926 #111926
-client.unfocused        #111926    #0f0f0f #bad2d6           #111926 #111926
-client.urgent           #c82438      #0f0f0f #bad2d6           #111926 #c82438
-client.placeholder      #111926    #0f0f0f #bad2d6           #111926 #111926
-client.background       #0f0f0f
+client.focused          #111926    #0f111e #c82438  #111926 #c82438
+client.focused_inactive #111926      #0f111e #bad2d6           #111926 #111926
+client.unfocused        #111926    #0f111e #bad2d6           #111926 #111926
+client.urgent           #c82438      #0f111e #bad2d6           #111926 #c82438
+client.placeholder      #111926    #0f111e #bad2d6           #111926 #111926
+client.background       #0f111e

@@ -1,20 +1,10 @@
-;==========================================================
-;
-;
 ;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
 ;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
 ;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
 ;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
 ;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
 ;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
-;
-;
-;   To learn more about how to configure Polybar
-;   go to https://github.com/polybar/polybar
-;
-;   The README contains a lot of information
-;
-;==========================================================
+;   https://github.com/polybar/polybar
 
 [colors]
 ;background = ${xrdb:color0:#222}
@@ -29,7 +19,7 @@ alert = #bd2c40
 
 [settings]
 screenchange-reload = true
-;pseudo-transparency = true
+pseudo-transparency = true
 
 [global/wm]
 margin-top = 0
@@ -39,7 +29,7 @@ wm-restack = i3
 [bar/base]
 ;fix transparency
 ;override-redirect = true
-background = {{content.bg_transparent}}
+background = {{transparent}}
 foreground = {{content.fg}}
 line-size = 0
 height = 38
@@ -57,7 +47,7 @@ dpi-y = {{dpi}}
 inherit = bar/base
 bottom = true
 modules-left = workspace title
-modules-right = free volume date
+modules-right = wired-network wired-network2 wireless-network free volume date
 
 [module/title]
 type = internal/xwindow
@@ -73,6 +63,30 @@ label-urgent-foreground = {{content.fg_urgent}}
 label-separator = " "
 label-separator-padding = 0
 
+[module/wired-network]
+type = internal/network
+interface = enp6s0
+
+[module/wired-network2]
+type = internal/network
+interface = enp11s0
+
+[module/wireless-network]
+type = internal/network
+format-disconnected = <label-disconnected>
+label-disconnected = Disconnected
+label-disconnected-foreground = {{red}}
+format-connected = <ramp-signal> <label-connected>
+label-connected = %essid% [%signal%]
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-5 = 
+ramp-signal-foreground = {{content.faded}}
+interface = wlp0s29u1u7u2
+
 [module/volume]
 type = internal/pulseaudio
 mapped = true
@@ -82,7 +96,7 @@ format-muted = <label-muted>
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
-ramp-volume-foreground = {{green}}
+ramp-volume-foreground = {{content.faded}}
 format-volume = <ramp-volume> <label-volume>
 
 [module/free]
@@ -92,7 +106,7 @@ interval = 10
 fixed-values = true
 label-mounted = %free%
 format-mounted-prefix = " "
-format-mounted-prefix-foreground = {{yellow}}
+format-mounted-prefix-foreground = {{content.faded}}
 format-mounted = <label-mounted>
 
 [module/date]
@@ -101,7 +115,7 @@ interval = 1
 date = "%a %b %d"
 time = %H:%M:%S
 format-prefix =   
-format-prefix-foreground = {{blue}}
+format-prefix-foreground = {{content.faded}}
 label = " %date%, %time%"
 
 ; vim:ft=dosini

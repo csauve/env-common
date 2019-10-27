@@ -148,9 +148,9 @@ smart_gaps on
 smart_borders on
 
 # class                 tab border                    background    tab text                ?                           window border
-client.focused          #111926    #0f111e #c82438  #111926 #c82438
-client.focused_inactive #111926      #0f111e #bad2d6           #111926 #111926
-client.unfocused        #111926    #0f111e #bad2d6           #111926 #111926
-client.urgent           #c82438      #0f111e #bad2d6           #111926 #c82438
-client.placeholder      #111926    #0f111e #bad2d6           #111926 #111926
-client.background       #0f111e
+client.focused          #222222    #0f0f0f #c82438  #222222 #880403
+client.focused_inactive #222222      #0f0f0f #bad2d6           #222222 #222222
+client.unfocused        #222222    #0f0f0f #bad2d6           #222222 #222222
+client.urgent           #c82438      #0f0f0f #bad2d6           #222222 #c82438
+client.placeholder      #222222    #0f0f0f #bad2d6           #222222 #222222
+client.background       #0f0f0f

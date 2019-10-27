@@ -1,3 +1,6 @@
+"show filename in window title
+set title
+
 "enable line numbers
 set nu
 

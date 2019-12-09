@@ -84,8 +84,8 @@ ramp-signal-2 = 
 ramp-signal-3 = 
 ramp-signal-4 = 
 ramp-signal-5 = 
-ramp-signal-foreground = #666666
-interface = wlp0s29u1u7u2
+ramp-signal-foreground = #6bdba1
+interface = wlp0s29u1u7u1
 
 [module/volume]
 type = internal/pulseaudio
@@ -96,7 +96,7 @@ format-muted = <label-muted>
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
-ramp-volume-foreground = #666666
+ramp-volume-foreground = #6bdba1
 format-volume = <ramp-volume> <label-volume>
 
 [module/free]
@@ -106,7 +106,7 @@ interval = 10
 fixed-values = true
 label-mounted = %free%
 format-mounted-prefix = " "
-format-mounted-prefix-foreground = #666666
+format-mounted-prefix-foreground = #6bdba1
 format-mounted = <label-mounted>
 
 [module/date]
@@ -115,7 +115,7 @@ interval = 1
 date = "%a %b %d"
 time = %H:%M:%S
 format-prefix =   
-format-prefix-foreground = #666666
+format-prefix-foreground = #6bdba1
 label = " %date%, %time%"
 
 ; vim:ft=dosini

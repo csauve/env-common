@@ -6,17 +6,6 @@
 ;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
 ;   https://github.com/polybar/polybar
 
-[colors]
-;background = ${xrdb:color0:#222}
-background = #222
-background-alt = #444
-;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
-foreground-alt = #555
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
-
 [settings]
 screenchange-reload = true
 pseudo-transparency = true
@@ -29,7 +18,7 @@ wm-restack = i3
 [bar/base]
 ;fix transparency
 ;override-redirect = true
-background = #00000000
+background = #0f0f0f
 foreground = #bad2d6
 line-size = 0
 height = 38
@@ -85,7 +74,7 @@ ramp-signal-3 = 
 ramp-signal-4 = 
 ramp-signal-5 = 
 ramp-signal-foreground = #6bdba1
-interface = wlp0s29u1u7u1
+interface = wlp0s29u1u7u2
 
 [module/volume]
 type = internal/pulseaudio

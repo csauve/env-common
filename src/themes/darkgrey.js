@@ -18,10 +18,11 @@ const c = {
   white: "#bad2d6",
   width_small: 4,
   width_normal: 12,
-  font: "Mononoki",
+  font: "Fira Mono",
   font_icons: "FontAwesome",
-  font_size: 14,
-  dpi: 80
+  font_size: 11,
+  font_size_term: 11,
+  dpi: 100
 };
 
 console.log(JSON.stringify({
@@ -35,7 +36,7 @@ console.log(JSON.stringify({
     good: c.green,
     bad: c.red,
     fg_urent: c.yellow,
-    fg_focused: c.red,
+    fg_focused: "#bf2f5e",
     accent: c.magenta,
     accent_faded: c.light_gray,
   },
@@ -44,10 +45,10 @@ console.log(JSON.stringify({
     bg: c.black,
     bg_transparent: "#11111111",
     border: {
-      focused: c.red_dark,
-      active: c.dark_gray,
-      inactive: c.dark_gray,
-      indicator: c.dark_gray,
+      focused: c.dark_gray,
+      active: c.black,
+      inactive: c.black,
+      indicator: c.black,
       urgent: c.red
     },
   },

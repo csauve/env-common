@@ -2,7 +2,7 @@
 set title
 
 "enable line numbers
-set nu
+"set nu
 
 "set cursorline
 

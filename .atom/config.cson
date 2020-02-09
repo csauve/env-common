@@ -44,7 +44,10 @@
       "node"
       "build"
     ]
-  "ide-rust": {}
+  "ide-rust":
+    rlsDefaultConfig:
+      clippyPreference: "On"
+    rlsToolchain: "stable"
   "ide-typescript": {}
   "isotope-ui": {}
   linter: {}

@@ -32,11 +32,9 @@ info "Kernel" (pacman -Q linux)
 info "Packages" (pacman -Q | wc -l)
 info "WM" "i3-gaps-next-git"
 info "Bar" (pacman -Q polybar)
-info "Compositor" "compton-tryone-git"
 info "Shell" (pacman -Q fish)
 info "Terminal" (pacman -Q kitty)
-info "Font" "Mononoki (edit)"
-info "Papes" "Fernando Correa"
+info "Font" "Fira Mono"
 info "CPU" "i7-2600K @ 3.40GHz"
 info "Memory" "8GB"
 info "GPU" "GTX 660 Ti"

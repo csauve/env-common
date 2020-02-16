@@ -24,7 +24,7 @@ xsetwacom --set 19 MapToOutput 1920x1080+0+0
 xsetwacom --set 20 MapToOutput 1920x1080+0+0
 
 #setup desktop environment
-feh --bg-tile ~/pictures/wallpapers/active
+feh --bg-fill ~/pictures/wallpapers/active
 polybar saturn &
 exec i3
 

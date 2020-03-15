@@ -133,10 +133,18 @@ bindsym $mod+r mode "resize"
 
 new_window normal
 for_window [class="^.*"] border pixel {{width_small}}
+
+for_window [class="kitty"] floating enable
 for_window [window_role="pop-up"] floating enable
-for_window [window_role="bubble"] floating enable
+for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 for_window [window_role="Preferences"] floating enable
+
+for_window [title="Halo"] move container to workspace 4
+for_window [window_role="browser"] move container to workspace 1
+for_window [class="Blender"] move container to workspace 2
+for_window [class="discord"] move container to workspace 3
+for_window [title="weechat"] move to workspace 3
 
 workspace 1 output "HDMI-0"
 workspace 2 output "HDMI-0"
